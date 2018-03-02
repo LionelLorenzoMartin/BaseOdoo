@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <act_window id="BaseOdoo_manzanas_action" name="amps"
+                    res_model="BaseOdoo.amps" />
+        <menuitem id="BaseOdoo_manzanas_menu"
+                  name="kiwis"
+                  action="BaseOdoo_manzanas_action"
+                  parent=""
+                  sequence="1" />
+
+        <record id="BaseOdoo_manzanas_view_tree" model="ir.ui.view">
+            <field name="name">Lista manzanas</field>
+            <field name="model">BaseOdoo.manzanas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="precio" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="BaseOdoo_manzanas_view_form" model="ir.ui.view">
+            <field name="name">Formulario manzanas</field>
+            <field name="model">BaseOdoo.manzanas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                        <field name="marca" />
+                        <field name="modelo" />
+                        <field name="precio" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="BaseOdoo_manzanas_view_search" model="ir.ui.view">
+            <field name="name">Busqueda manzanas</field>
+            <field name="model">BaseOdoo.manzanas</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="precio" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

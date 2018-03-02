@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="BaseOdoo_kiwis_action" name="amps"
+                    res_model="BaseOdoo.amps" />
+        <menuitem id="BaseOdoo_kiwis_menu"
+                  name="kiwis"
+                  action="BaseOdoo_kiwis_action"
+                  parent=""
+                  sequence="1" />
+
+        <record id="BaseOdoo_kiwis_view_tree" model="ir.ui.view">
+            <field name="name">Lista kiwis</field>
+            <field name="model">BaseOdoo.kiwis</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="precio" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="BaseOdoo_kiwis_view_form" model="ir.ui.view">
+            <field name="name">Formulario kiwis</field>
+            <field name="model">BaseOdoo.kiwis</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                        <field name="marca" />
+                        <field name="modelo" />
+                        <field name="precio" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="BaseOdoo_kiwis_view_search" model="ir.ui.view">
+            <field name="name">Busqueda kiwis</field>
+            <field name="model">BaseOdoo.kiwis</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="marca" />
+                    <field name="modelo" />
+                    <field name="precio" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+
